@@ -1,0 +1,54 @@
+# ── COMPOSER ──────────────────────────────────────────────────
+/vendor/
+# Library: the lock file is not committed (apps commit theirs).
+composer.lock
+
+
+# ── TESTING & COVERAGE ────────────────────────────────────────
+/.phpunit.cache/
+.phpunit.result.cache
+/coverage/
+/coverage-html/
+coverage.xml
+clover.xml
+infection.log
+
+
+# ── STATIC ANALYSIS & REFACTORING CACHES ──────────────────────
+.php-cs-fixer.cache
+/.phpstan.cache/
+/.rector/
+phpstan-results.json
+
+
+# ── PROFILING & DEBUGGING (Xdebug) ────────────────────────────
+cachegrind.out.*
+xdebug.log
+error_log
+php_errors.log
+
+
+# ── BUILD ARTIFACTS ───────────────────────────────────────────
+/build/
+/dist/
+*.phar
+
+
+# ── ENVIRONMENT ───────────────────────────────────────────────
+.env
+.env.*.local
+
+
+# ── OS & IDEs ─────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+Thumbs.db
+ehthumbs.db
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~

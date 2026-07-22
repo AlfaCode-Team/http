@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & usage help
+    url: https://github.com/AlfaCode-Team/http/discussions
+    about: Ask usage questions in Discussions instead of opening an issue.
+  - name: Security vulnerability
+    url: https://github.com/AlfaCode-Team/http/security/advisories/new
+    about: Report security issues privately — never in a public issue.
