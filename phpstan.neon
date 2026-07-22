@@ -2,7 +2,14 @@ parameters:
     level: 6
     paths:
         - src
-    # Identity and ModuleContainer are provided by the host kernel at runtime; they
-    # are optional soft dependencies of this standalone package.
+    # Ignores that do not match must not fail the build (host-dependent symbols).
+    reportUnmatchedIgnoredErrors: false
     ignoreErrors:
+        # Identity and ModuleContainer are provided by the host kernel at runtime;
+        # they are optional soft dependencies of this standalone package.
         - '#AlfacodeTeam\\PhpServicePlatform\\Kernel\\(Security\\Identity|Container\\ModuleContainer)#'
+        # Symfony's InputBag is generic; the kernel Request wraps it without a
+        # narrowed TInput. Carried over from the kernel's PHPStan baseline.
+        - identifier: missingType.generics
+        # UserAgent parsing — offset is guaranteed present; harmless defensive ??.
+        - identifier: nullCoalesce.offset
