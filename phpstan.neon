@@ -1,0 +1,8 @@
+parameters:
+    level: 6
+    paths:
+        - src
+    # Identity and ModuleContainer are provided by the host kernel at runtime; they
+    # are optional soft dependencies of this standalone package.
+    ignoreErrors:
+        - '#AlfacodeTeam\\PhpServicePlatform\\Kernel\\(Security\\Identity|Container\\ModuleContainer)#'
