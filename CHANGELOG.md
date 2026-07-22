@@ -6,6 +6,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-07-22
+
 ### Added
 
 - Initial extraction of the PhpServicePlatform kernel HTTP layer into a standalone,
