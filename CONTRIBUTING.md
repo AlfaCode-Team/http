@@ -23,7 +23,7 @@ composer install
 
 ## Coding standards
 
-- PHP 8.2+, `declare(strict_types=1);` in every file.
+- PHP 8.4+, `declare(strict_types=1);` in every file.
 - Follow the existing formatting (PSR-12-ish, aligned to the surrounding code).
 
 ## Reporting issues

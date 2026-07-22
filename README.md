@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/AlfaCode-Team/http/actions/workflows/ci.yml/badge.svg)](https://github.com/AlfaCode-Team/http/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![PHP ^8.2](https://img.shields.io/badge/php-%5E8.2-777bb4.svg)](https://www.php.net/)
+[![PHP ^8.4](https://img.shields.io/badge/php-%5E8.4-777bb4.svg)](https://www.php.net/)
 
 The HTTP layer of the **PhpServicePlatform** kernel: a small, immutable
 `Request`/`Response` surface with a PSR-7 `Uri`, content negotiation, absolute-URL
@@ -32,7 +32,7 @@ depend on Symfony types directly.
 composer require alfacode-team/http
 ```
 
-Requires PHP 8.2+ and the `symfony/http-foundation` + `symfony/mime` runtime deps
+Requires PHP 8.4+ and the `symfony/http-foundation` + `symfony/mime` runtime deps
 (installed automatically).
 
 ## Usage
