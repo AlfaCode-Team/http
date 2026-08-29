@@ -589,6 +589,34 @@ final class Request extends SymfonyRequest
         return $clone;
     }
 
+    /**
+     * Set SEVERAL attributes in one new instance.
+     *
+     * Every with*() deep-clones all seven parameter bags, so a chain of them
+     * pays that price once per link. ResolveStage attaching route_entry,
+     * route_params and target_service is one logical step, and used to cost
+     * three full clones of a request nothing had read yet.
+     *
+     * Identical in effect to chaining withAttribute(); it just does not build
+     * the two intermediate requests that get thrown away.
+     *
+     * @param array<string, mixed> $attributes
+     */
+    public function withAttributes(array $attributes): static
+    {
+        if ($attributes === []) {
+            return $this;
+        }
+
+        $clone = clone $this;
+
+        foreach ($attributes as $key => $value) {
+            $clone->attributes->set($key, $value);
+        }
+
+        return $clone;
+    }
+
     public function withIdentity(Identity $identity): static
     {
         $clone = clone $this;
